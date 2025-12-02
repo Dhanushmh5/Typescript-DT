@@ -7,7 +7,10 @@ var User = {
 };
 // function createUser({name: string, isPaid: boolean}){}
 var newUser = { name: "hitesh", isPaid: false, email: "h@h.com" };
-function createUser(user) {
-    return { name: "", email: "", isActive: true };
-}
-createUser({ name: "", email: "", isActive: true });
+var myUser = {
+    _id: "1245",
+    name: "h",
+    email: "h@h.com",
+    isActive: false
+};
+myUser.email = "h@gmail.com";
