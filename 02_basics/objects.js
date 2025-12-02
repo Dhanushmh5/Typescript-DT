@@ -5,11 +5,9 @@ var User = {
     email: "hitesh@lco.dev",
     isAvtive: true
 };
-function createUser(_a) {
-    var string = _a.name, boolean = _a.isPaid;
-}
+// function createUser({name: string, isPaid: boolean}){}
 var newUser = { name: "hitesh", isPaid: false, email: "h@h.com" };
-createUser(newUser);
-function createCourse() {
-    return { name: "reactjs", price: 399 }; //return type in object format
+function createUser(user) {
+    return { name: "", email: "", isActive: true };
 }
+createUser({ name: "", email: "", isActive: true });
