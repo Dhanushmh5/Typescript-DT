@@ -5,7 +5,7 @@
 //Classes in TS
 
 class User{
-    name:string
+    protected name:string
     private email:string //access specifiers can only be used in TS
     public city:string=""
     constructor(name:string,email:string,public id:number){
@@ -26,6 +26,15 @@ class User{
             
         }
     }
+}
+
+class subUser extends User{
+    //protected can be used in any class that inherit the base class
+    changeName(){
+        this.name='abcd'
+        
+    }
+    
 }
 
 const obj=new User('Dhanush','abc@gmail.com',123)
