@@ -6,8 +6,8 @@
 
 class User{
     name:string
-    email:string
-    city:string=""
+    private email:string //access specifiers can only be used in TS
+    public city:string=""
     constructor(name:string,email:string){
         this.name=name
         this.email=email
