@@ -72,7 +72,7 @@ function getFood(pet: Fish | Bird){
     }
 }
 
-
+//Discriminated Unions in TypeScript
 interface Circle {
     kind: "circle",
     radius: number
@@ -98,7 +98,7 @@ function getTrueShape(shape: Shape){
     //return shape.side * shape.side
 }
 
-
+//exhaustive checking with never type
 function getArea(shape: Shape){
     switch(shape.kind){
         case "circle":
@@ -110,7 +110,8 @@ function getArea(shape: Shape){
             return shape.length * shape.width
 
         default:
+            //this case should never occur made to handle future changes
             const _defaultforshape: never = shape
-            return _defaultforshape
+            return _defaultforshape// will throw error if new shape is added in future
     }
 }
