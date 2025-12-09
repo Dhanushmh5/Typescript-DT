@@ -40,12 +40,12 @@ interface Admin{
 }
 
 function isAdminAccount(account: User | Admin){
-    if ("isAdmin" in account) {
+    if ("isAdmin" in account) { // the in operator narrow down the type
         return account.isAdmin
     }
 }
 
-
+// instanceof narrowing
 function logValue(x: Date | string) {
     if (x instanceof Date) {
       console.log(x.toUTCString());        
@@ -54,7 +54,7 @@ function logValue(x: Date | string) {
     }
   }
 
-
+//type predicates for custom type narrowing
 type Fish = {swim: () => void};
 type Bird = {fly: () => void};
 
